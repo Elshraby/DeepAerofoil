@@ -64,21 +64,21 @@ Enhanced feature extraction capabilities
 ## Methodology
 The project follows a structured machine learning workflow:
 
-Data Collection and Preparation
+1. Data Collection and Preparation
 
 Gathering airfoil coordinates
 Extracting aerodynamic coefficients from XFOIL
 Dataset compilation and organization
 
 
-Data Preprocessing
+2. Data Preprocessing
 
 Feature scaling and normalization using scikit-learn
 Data splitting into training and validation sets
 Input formatting for respective models
 
 
-Model Development
+3. Model Development
 
 PyTorch implementation
 CNN architecture design
