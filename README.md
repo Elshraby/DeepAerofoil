@@ -1,6 +1,7 @@
 # DeepAerofoil
-This project was jut a tool to apply the Basic Principles of Deep Learning in a topic I appreciate -- Airdoils. Two models were created the first is a regression model and the second is a convolutional neural network. The model will predict the Cl, Cd, and Cm of the airfoil based on the shape of the airfoil and the angle of attack.
-The M.O. will be the same as any other Machine Learning Project.
+This project was my tool to apply the Basic Principles of Deep Learning in a topic I appreciate -- Airfoils. Two novel Neural Networks were created in PyTorch (regression model and convolutional neural network) with which their results were compared to a [similar project] (https://github.com/vicmcl/deeplearwing/tree/main) . The models will predict the Cl, Cd, and Cm of the airfoil based on the shape of the airfoil and the angle of attack.
+
+The general steps were followed as any other ML project:
 1. Collect and Prepare the Data.
 2. Data-Preprocessing.
 3. Build the training model.
@@ -119,5 +120,6 @@ R-squared (R²) scores for fit quality
 Validation performance metrics available in training logs
 
 
-Resources and Refrences
-All credts are due to the original study by which this project was just a recreation in a different framwork with tweaks to fasten and improve the accuracy and performance
+## Resources and Refrences
+. All credts are due to the original study by which this project was just a recreation in a different framwork with tweaks to fasten and improve the accuracy and performance. [link] (https://github.com/vicmcl/deeplearwing/tree/main)
+. The Idea of transforming the Airfoil into discrete points was taken from this [project.] (https://github.com/vicmcl/deeplearwing/tree/main)
