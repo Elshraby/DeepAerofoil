@@ -122,4 +122,4 @@ Validation performance metrics available in training logs
 
 ## Resources and Refrences
 * All credts are due to the original study by which this project was just a recreation in a different framwork with tweaks to fasten and improve the accuracy and performance. [link](https://github.com/vicmcl/deeplearwing/tree/main)
-* The Idea of transforming the Airfoil into discrete points was taken from this [project.](https://github.com/vicmcl/deeplearwing/tree/main)
+* The Idea of transforming the Airfoil into discrete points was taken from this [project.](https://github.com/Mohamedelrefaie/TransonicSurrogate/tree/main)
