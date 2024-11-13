@@ -1,5 +1,5 @@
 # DeepAerofoil
-This project was my tool to apply the Basic Principles of Deep Learning in a topic I appreciate -- Airfoils. Two novel Neural Networks were created in PyTorch (regression model and convolutional neural network) with which their results were compared to a similar project["[1]"](https://github.com/vicmcl/deeplearwing/tree/main) . The models will predict the Cl, Cd, and Cm of the airfoil based on the shape of the airfoil and other specified conditions like the angle of attack and Reynolds number.
+This project was my tool to apply the Basic Principles of Deep Learning in a topic I appreciate -- Airfoils. Two novel Neural Networks were created in PyTorch (regression model and convolutional neural network) with which their results were compared to a similar project[1](https://github.com/vicmcl/deeplearwing/tree/main) . The models will predict the Cl, Cd, and Cm of the airfoil based on the shape of the airfoil and other specified conditions like the angle of attack and Reynolds number.
 
 This project involved compiling a comprehensive dataset of 110 unique airfoils, focusing on essential aerodynamic parameters such as:
 
@@ -8,6 +8,7 @@ This project involved compiling a comprehensive dataset of 110 unique airfoils, 
 * Drag coefficient (Cd)
 * Moment coefficient (Cm)
 
+### Overview / Steps
 The general steps were followed as any other ML project:
 1. Collect and Prepare the Data.
 2. Data-Preprocessing.
@@ -29,8 +30,13 @@ Performance Validation: Assessed the trained model using metrics such as:
 Mean Squared Error (MSE)
 R-squared (R²) score for determining the model's accuracy and reliability.
 
-## Dataset
-The Cl, Cd, and Cm were extracted from XFOIL and the file is presented as "xfoil_data.csv". (A more extensive list can be found here.)
+## Datasets
+Three datasets in the data file were used.
+### Regression Model
+For this model hte only acceptable data is numbers so the geometry of each airfoil were normalized and represented by 12 values in the upper and lower surfaces. For the methodolgy I followed, refer to this paper. [2](https://github.com/Mohamedelrefaie/TransonicSurrogate/tree/main) This was under the file xfoil_Reg. (Link to the dataset)
+
+### Convolutional Neural Network
+The Cl, Cd, and Cm were extracted from XFOIL at first then just complemented with data on [Airfoils Tools](http://airfoiltools.com/) as they appeared to be the same. and the file is presented as "xfoil_data.csv". (A more extensive list can be found here.)
 In the first model, the coordinates were plotted in an Excel sheet and 20 points were chosen at 0-->1 taking steps of 0.1 to represent the Airfoil.
 See Pic {picture link here./}
 In the second model, the whole points were used to plot the shape of the airfoil and then feeds it into the model.
@@ -47,12 +53,11 @@ Moment coefficient
 Data sourced from XFOIL simulations
 Available in xfoil_data.csv
 
+
 ## Model Architectures
 Model 1: Regression
 
-Utilizes 20 discretized points along the airfoil surface
-Points sampled at uniform intervals (0 to 1 with 0.1 step size)
-Coordinates extracted and processed through Excel
+Code of the neural network on regression example and maybe a representaion.
 
 Model 2: CNN
 
