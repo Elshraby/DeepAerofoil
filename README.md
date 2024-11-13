@@ -1,5 +1,5 @@
 # DeepAerofoil
-This project was my tool to apply the Basic Principles of Deep Learning in a topic I appreciate -- Airfoils. Two novel Neural Networks were created in PyTorch (regression model and convolutional neural network) with which their results were compared to a [similar project](https://github.com/vicmcl/deeplearwing/tree/main) . The models will predict the Cl, Cd, and Cm of the airfoil based on the shape of the airfoil and the angle of attack.
+This project was my tool to apply the Basic Principles of Deep Learning in a topic I appreciate -- Airfoils. Two novel Neural Networks were created in PyTorch (regression model and convolutional neural network) with which their results were compared to a similar project[1](https://github.com/vicmcl/deeplearwing/tree/main) . The models will predict the Cl, Cd, and Cm of the airfoil based on the shape of the airfoil and the angle of attack.
 
 The general steps were followed as any other ML project:
 1. Collect and Prepare the Data.
@@ -121,5 +121,5 @@ Validation performance metrics available in training logs
 
 
 ## Resources and Refrences
-* All credts are due to the original study by which this project was just a recreation in a different framwork with tweaks to fasten and improve the accuracy and performance. [link](https://github.com/vicmcl/deeplearwing/tree/main)
-* The Idea of transforming the Airfoil into discrete points was taken from this [project.](https://github.com/Mohamedelrefaie/TransonicSurrogate/tree/main)
+* [1] DeepLearWing. [link](https://github.com/vicmcl/deeplearwing/tree/main)
+* [2] Surrogate Modeling of the Aerodynamic Performance for Transonic Regime. [link](https://github.com/Mohamedelrefaie/TransonicSurrogate/tree/main)
