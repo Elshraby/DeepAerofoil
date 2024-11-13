@@ -1,5 +1,12 @@
 # DeepAerofoil
-This project was my tool to apply the Basic Principles of Deep Learning in a topic I appreciate -- Airfoils. Two novel Neural Networks were created in PyTorch (regression model and convolutional neural network) with which their results were compared to a similar project[1](https://github.com/vicmcl/deeplearwing/tree/main) . The models will predict the Cl, Cd, and Cm of the airfoil based on the shape of the airfoil and the angle of attack.
+This project was my tool to apply the Basic Principles of Deep Learning in a topic I appreciate -- Airfoils. Two novel Neural Networks were created in PyTorch (regression model and convolutional neural network) with which their results were compared to a similar project["[1]"](https://github.com/vicmcl/deeplearwing/tree/main) . The models will predict the Cl, Cd, and Cm of the airfoil based on the shape of the airfoil and other specified conditions like the angle of attack and Reynolds number.
+
+This project involved compiling a comprehensive dataset of 110 unique airfoils, focusing on essential aerodynamic parameters such as:
+
+* Reynolds number (Re)
+* Lift coefficient (Cl)
+* Drag coefficient (Cd)
+* Moment coefficient (Cm)
 
 The general steps were followed as any other ML project:
 1. Collect and Prepare the Data.
@@ -7,15 +14,7 @@ The general steps were followed as any other ML project:
 3. Build the training model.
 4. Fit the data into the model and make predictions
 5. Evaluate and Improve the model.
-
-
-## Overview
-This project involved compiling a comprehensive dataset of 110 unique airfoils, focusing on essential aerodynamic parameters such as:
-
-* Reynolds number
-* Lift coefficient (Cl)
-* Drag coefficient (Cd)
-A convolutional neural network (CNN) was designed and implemented using PyTorch to predict the aerodynamic performance of these airfoils based on their shapes and specified conditions. The project also employed scikit-learn for data splitting, normalization, and evaluation of the model.
+The project also employed scikit-learn for data splitting, normalization, and evaluation of the model.
 
 ### Key Features
 
