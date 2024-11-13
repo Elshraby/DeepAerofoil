@@ -8,6 +8,9 @@ This project involved compiling a comprehensive dataset of 110 unique airfoils, 
 * Drag coefficient (Cd)
 * Moment coefficient (Cm)
 
+### Whats New?
+Simplicity, only represented points instead of the picture and got more accurate results in terms of RMSE. It's often deceiving to go for the whole resources and overlooking the easier way to do it. In this project the same procedure was undertaked and much easier route too. Both Models predicted more accurae results. The sample was less though.
+
 ### Overview / Steps
 The general steps were followed as any other ML project:
 1. Collect and Prepare the Data.
