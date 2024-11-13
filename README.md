@@ -117,3 +117,7 @@ The models are evaluated using industry-standard metrics:
 Mean Squared Error (MSE) for prediction accuracy
 R-squared (R²) scores for fit quality
 Validation performance metrics available in training logs
+
+
+Resources and Refrences
+All credts are due to the original study by which this project was just a recreation in a different framwork with tweaks to fasten and improve the accuracy and performance
