@@ -105,6 +105,12 @@ Iterative improvement
 
 
 ## Model Performance
+Compared to the original study by TensorFlow, the results for both Regression and Mathimatical model not only exceeds them, they are much faster.
+| MSE | Original Study | Current Results |
+| :---: | :---: | :---: |
+| Cl | 0.0024 | 0.0021 |
+| Cd | 0.0342 | 0.0310 |
+| Cm | 0.0342 | 0.0310 |
 
 The models are evaluated using industry-standard metrics:
 
