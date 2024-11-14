@@ -19,7 +19,7 @@ The general steps were followed as any other ML project:
 4. Fit the data into the model and make predictions
 5. Evaluate and Improve the model.
 The project also employed scikit-learn for data splitting, normalization, and evaluation of the model.
-![](images/RegMatch.PNG)
+![](images/RegMatch.png)
 
 ### Key Features
 
