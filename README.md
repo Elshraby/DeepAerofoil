@@ -38,7 +38,7 @@ R-squared (R²) score for determining the model's accuracy and reliability.
 Three datasets in the data file were used.
 ### Regression Model
 For this model hte only acceptable data is numbers so the geometry of each airfoil were normalized and represented by 12 values in the upper and lower surfaces. For the methodolgy I followed, refer to this paper. [2](https://github.com/Mohamedelrefaie/TransonicSurrogate/tree/main) This was under the file xfoil_Reg. (Link to the dataset)
-![](images/AirfoilShape.PNG)
+![](images/AirfoilShape.png)
 ### Convolutional Neural Network
 The Cl, Cd, and Cm were extracted from XFOIL at first then just complemented with data on [Airfoils Tools](http://airfoiltools.com/) as they appeared to be the same. and the file is presented as "xfoil_data.csv". (A more extensive list can be found here.)
 In the first model, the coordinates were plotted in an Excel sheet and 20 points were chosen at 0-->1 taking steps of 0.1 to represent the Airfoil.
@@ -63,14 +63,14 @@ Model 1: Regression
 
 Code of the neural network on regression example and maybe a representaion.
 
-![](images/Regression.PNG)
+![](images/Regression.png)
 
 Model 2: CNN
 
 Uses complete airfoil coordinate sets
 Direct shape processing through convolutional layers
 Enhanced feature extraction capabilities
-![](images/CNNStdDev.PNG)
+![](images/CNNStdDev.png)
 
 ## Methodology
 The project follows a structured machine learning workflow:
@@ -119,11 +119,11 @@ Iterative improvement
 Compared to the original study by TensorFlow, the results for both Regression and Mathimatical model not only exceeds them, they are much faster.
 | MAE | Original Study | Current Cov Results | Current Reg Results |
 | :---: | :---: | :---: | :---: |
-| Cl | 0.1081 | 0.1023 | 0.0215 |
-| Cd | 0.0106 | 0.0076 | 0.0057 |
-| Cm | 0.0155 | 0.0143 | 0.0071 |
+| Cl | 0.1081 | 0.1017 | 0.0215 |
+| Cd | 0.0106 | 0.0078 | 0.0057 |
+| Cm | 0.0155 | 0.0154 | 0.0071 |
 
-While it didn't capture the whole geometry of the airfoil, it exceeded the CNN results with only 7 min to train and test.
+While it didn't capture the whole geometry of the airfoil, it exceeded the CNN results with only 5 min to train and test.
 One Other important factor to consider is the avilability of resources: RAM GB and Time invested.
 Validation performance metrics available in training logs
 
