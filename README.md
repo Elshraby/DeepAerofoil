@@ -1,15 +1,15 @@
 # DeepAerofoil
-This project was my tool to apply the Basic Principles of Deep Learning in a topic I appreciate -- Airfoils. Two novel Neural Networks were created in PyTorch (regression model and convolutional neural network) with which their results were compared to a similar project[1](https://github.com/vicmcl/deeplearwing/tree/main) . The models will predict the Cl, Cd, and Cm of the airfoil based on the shape of the airfoil and other specified conditions like the angle of attack and Reynolds number.
+This project was my tool to apply the Basic Principles of Deep Learning in a topic I appreciate -- Airfoils. Two novel Neural Networks were created in PyTorch (regression model and convolutional neural network) that will predict the Cl, Cd, and Cm of the airfoil based on its shape and other specified conditions like the angle of attack and Reynolds number. Also the results were compared to a similar project and proved to be more efficient and use extensively less computational time and resources. [1](https://github.com/vicmcl/deeplearwing/tree/main)
 
 This project involved compiling a comprehensive dataset of 110 unique airfoils, focusing on essential aerodynamic parameters such as:
-
 * Reynolds number (Re)
 * Lift coefficient (Cl)
 * Drag coefficient (Cd)
 * Moment coefficient (Cm)
+* Angle of Attack (AoA)
 
 ### Whats New?
-Simplicity, only represented points instead of the picture and got more accurate results in terms of RMSE. It's often deceiving to go for the whole resources and overlooking the easier way to do it. In this project the same procedure was undertaked and much easier route too. Both Models predicted more accurae results. The sample was less though.
+The original study plotted the image of airfoils then fed it into the model which required both extensive amount of resources. What this project offers is Simplicity. Only represented points instead of the picture which is only plotted within the model and got more accurate results in terms of Absloute Mean Error for the predicted Cl, Cd, and Cm. It's often deceiving to go for the whole resources and overlooking the easier way to do it. In this project the same procedure was undertaked and much easier route too. Both Models predicted more accurae results. The sample was less though. Moreever, the CPU used to chrash under 16 GB of RAM, now it will work effeciently with only 2 GB RAM.
 
 ### Overview / Steps
 The general steps were followed as any other ML project:
@@ -114,16 +114,13 @@ Iterative improvement
 
 ## Model Performance
 Compared to the original study by TensorFlow, the results for both Regression and Mathimatical model not only exceeds them, they are much faster.
-| MSE | Original Study | Current Results |
+| MAE | Original Study | Current Results |
 | :---: | :---: | :---: |
-| Cl | 0.0024 | 0.0021 |
-| Cd | 0.0342 | 0.0310 |
-| Cm | 0.0342 | 0.0310 |
+| Cl | 0.1081 | 0.1023 |
+| Cd | 0.0106 | 0.0076 |
+| Cm | 0.0155 | 0.0143 |
 
-The models are evaluated using industry-standard metrics:
-
-Mean Squared Error (MSE) for prediction accuracy
-R-squared (R²) scores for fit quality
+One Other important factor to consider is the avilability of resources: RAM GB and Time invested.
 Validation performance metrics available in training logs
 
 
