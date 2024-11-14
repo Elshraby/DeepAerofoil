@@ -114,12 +114,13 @@ Iterative improvement
 
 ## Model Performance
 Compared to the original study by TensorFlow, the results for both Regression and Mathimatical model not only exceeds them, they are much faster.
-| MAE | Original Study | Current Results |
-| :---: | :---: | :---: |
-| Cl | 0.1081 | 0.1023 |
-| Cd | 0.0106 | 0.0076 |
-| Cm | 0.0155 | 0.0143 |
+| MAE | Original Study | Current Cov Results | Current Reg Results |
+| :---: | :---: | :---: | :---: |
+| Cl | 0.1081 | 0.1023 | 0.0215 |
+| Cd | 0.0106 | 0.0076 | 0.0057 |
+| Cm | 0.0155 | 0.0143 | 0.0071 |
 
+While it didn't capture the whole geometry of the airfoil, it exceeded the CNN results with only 7 min to train and test.
 One Other important factor to consider is the avilability of resources: RAM GB and Time invested.
 Validation performance metrics available in training logs
 
