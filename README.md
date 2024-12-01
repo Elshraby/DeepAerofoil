@@ -88,7 +88,7 @@ We developed two distinct data representation approaches to capture airfoil geom
         return image, input_params, self.targets[idx]
 ```
 
-## 3. Results
+## 3. Results and Performance Analysis
 ### 3.1 Regression Model
 
 ![](images/Regression.png)
@@ -98,9 +98,9 @@ We developed two distinct data representation approaches to capture airfoil geom
 ![](images/CNNStdDev.png)
 
 
-## 4. Model Performance
+### 3.3 Model Performance
 Compared to the original study by TensorFlow, the results for both Regression and Mathimatical model not only exceeds them, they are much faster.
-| MAE | Original Study | Current Cov Results | Current Reg Results |
+| MAE | Study [1] | Current Cov Results | Current Reg Results |
 | :---: | :---: | :---: | :---: |
 | Cl | 0.1081 | 0.1017 | 0.0215 |
 | Cd | 0.0106 | 0.0078 | 0.0057 |
@@ -110,8 +110,8 @@ While it didn't capture the whole geometry of the airfoil, it exceeded the CNN r
 One Other important factor to consider is the avilability of resources: RAM GB and Time invested.
 Validation performance metrics available in training logs
 
-## Acknoledgment
-This project was conducted as an independent academic exploration of machine learning techniques in aerospace engineering.
+## 4. Conclusion
+This project demonstrated a novel machine learning architecture to aerodynamic performance prediction for airfoils, offering a computationally efficient alternative to traditional computational fluid dynamics methods. By carefully balancing model complexity, data representation, and computational resources, this project provides a promising framework for rapid aerodynamic coefficient estimation.
 
 ## Resources and Refrences
 * [1] DeepLearWing. [link](https://github.com/vicmcl/deeplearwing/tree/main)
