@@ -9,6 +9,8 @@ This project introduces simplicity as its key innovation. Instead of using full 
 
 It's easy to get caught up in using complex techniques, but sometimes a simpler approach can yield better results. By tweaking the conceptualization of the problem, this project successfully implements a much more efficient method. Despite using a smaller sample size, the model achieved better accuracy, and the computational efficiency was vastly improved. Whereas the previous approach required a system with 16 GB of RAM and struggled to operate, this method now runs smoothly with just 2 GB of RAM.
 
+![](images/RegMatch.png)
+
 ## 2. Methodology
 
 ### 2.1 Data Acquisition and Preprocessing
@@ -58,6 +60,8 @@ We developed two distinct data representation approaches to capture airfoil geom
    * Rapid training and inference
    * Low resource requirements (2 GB RAM)
 
+![](images/AirfoilShape.png)
+
 #### 2.2.2 Convolutional Neural Network (CNN)
 * **Architecture**: Convolutional layers with geometric feature extraction
 * **Input**: Airfoil coordinate representations
@@ -67,8 +71,22 @@ We developed two distinct data representation approaches to capture airfoil geom
    * Deeper geometric information processing
    * Ability to capture complex geometric relationships
  
+```python
+    def __getitem__(self, idx):
+        x = np.array(self.x_coords[idx])
+        y = np.array(self.y_coords[idx])
 
-![](images/RegMatch.png)
+        # Create 2D image from x, y coordinates
+        image = np.column_stack((x, y))
+        image = image.reshape(1, len(x), 2)  # Dynamic sizing based on the number of points
+
+        if self.transform:
+            image = self.transform(image)
+
+        input_params = self.input_params[idx]
+
+        return image, input_params, self.targets[idx]
+```
 
 ### Key Features
 
@@ -95,7 +113,7 @@ This project involved compiling a comprehensive dataset of 110 unique airfoils, 
 
 ### Regression Model
 For this model hte only acceptable data is numbers so the geometry of each airfoil were normalized and represented by 12 values in the upper and lower surfaces. For the methodolgy I followed, refer to this paper. [2](https://github.com/Mohamedelrefaie/TransonicSurrogate/tree/main) This was under the file xfoil_Reg. (Link to the dataset)
-![](images/AirfoilShape.png)
+
 ### Convolutional Neural Network
 The Cl, Cd, and Cm were extracted from XFOIL at first then just complemented with data on [Airfoils Tools](http://airfoiltools.com/) as they appeared to be the same. and the file is presented as "xfoil_data.csv". (A more extensive list can be found here.)
 In the first model, the coordinates were plotted in an Excel sheet and 20 points were chosen at 0-->1 taking steps of 0.1 to represent the Airfoil.
